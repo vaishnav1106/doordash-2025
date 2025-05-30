@@ -25,12 +25,11 @@ body{
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between; /* helps align logo and buttons */
+    justify-content: space-between;
     align-items: center;
     background-color: rgba(0, 0, 0, 0); 
     z-index: 2;
     height:6%;
-   
 }
 
 .logo2 {
@@ -89,27 +88,7 @@ body{
 .sign-in:hover{
     background-color: rgb(211, 30, 18);
 }
-/* /////////////////////////////////////////////////////////////////////////////////////// */
-@media (max-width: 600px) {
-    .top-container {
-        flex-direction: column;
-        height: auto;
-    }
 
-    .logo2 {
-        position: static;
-        transform: none;
-        margin: 10px auto;
-    }
-
-    .banner-buttons {
-        position: static;
-        transform: none;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-}
-/* /////////////////////////////////////////////////////////////////////////////////////// */
 .heading{
     position:absolute;
     color:white;
@@ -121,7 +100,6 @@ body{
     font-weight:bolder;
     word-spacing: 8px;
 }
-/* /////////////////////////////////////////////////////////////////////////////////////// */
 
 .mid-container{
   margin-left:30px;
@@ -142,7 +120,6 @@ body{
   height: 44px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
   gap: 10px;
-  
 }
 .search-bar:hover{
     border: solid 2px;
@@ -159,7 +136,7 @@ body{
   flex: 1;
   border: none;
   outline: none;
-  font-family: "Blinker",'Roboto', sans-serif;
+  font-family: "Blinker", 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing:.09em;
   padding-left: 0px;
@@ -173,14 +150,11 @@ body{
   background-color: #EB1700;
   border: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   display: block;
   margin-left: 40px;
-  
-  /* align-items: center;
-  justify-content: center; */
 }
 
 .search-btn .arrow {
@@ -201,7 +175,6 @@ body{
   width: auto;
   height:7px;
   margin:0;
- 
 }
 .save-address{
     border: none;
@@ -219,4 +192,59 @@ body{
     width:15px ;
     height: 25px;
     margin-right:7px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 850px) {
+  .search-bar {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+
+  .sign {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .logo2 {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .banner-buttons {
+    right: 20px;
+  }
+
+  .heading {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 18px;
+    word-spacing: 5px;
+  }
+}
+
+@media (max-width:1550px) and (min-width:849px)
+{
+    
+}
+
+@media screen and (min-width: 2000px) {
+  .banner-img {
+    height: 100vh;
+  }
+
+  .search-bar {
+    width: 500px;
+    height: 56px;
+  }
+
+  .search-input::placeholder {
+    font-size: 20px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
 }
