@@ -1,19 +1,39 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<link rel="stylesheet" href="
-style.css">
+  <meta charset="UTF-8">
+  <title>Scroll Header - DoorDash Style</title>
+  <link rel="stylesheet" href="style.css">
 </head>
- <body>
- 	
-         <div class="search-bar">
-  <img src="img/location.png" alt="Location Icon" class="location-icon">
-  <input type="text" placeholder="Enter delivery address" class="search-input">
-  <button class="search-btn">
-    <span class="arrow">&#8594;</span>
-  </button>
-</div>
-
-
-    </div>	
- </body>
+<body>
+  <!-- Scroll navbar -->
+  <header id="scrollHeader">
+    <div class="nav-container">
+      <div class="left">
+        <img src="img/DoorDash logo vector.svg" alt="Full Logo" class="logo full-logo">
+        <img src="img/door.png" alt="Small Logo" class="logo small-logo ">
+        <img src="img/door.png" alt="Small Logo" class="logo small-logo1 ">
+      </div>
+      <div class="right">
+        <!-- Desktop buttons -->
+        <button class="btn signin desktop-only">Sign In</button>
+        <button class="btn signup desktop-only">Sign Up</button>
+        <!-- Mobile buttons -->
+        <button class="btn signin mobile-only">Login</button>
+        <button class="btn signup mobile-only">Open App</button>
+      </div>
+    </div>
+  </header>
+  <!-- Content to allow scrolling -->
+  <div class="content">
+    <h1>Welcome to the Page</h1>
+    <p>Scroll down to see the header appear...</p>
+    <div style="height: 2000px;"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
+
+
+
