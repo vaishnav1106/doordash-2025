@@ -1,0 +1,86 @@
+.neighborhood {
+  text-align: center;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background: white;
+}
+
+.neighborhood h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.tab {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.tab.active {
+  color: black;
+}
+
+.tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: black;
+}
+
+/* City Lists */
+.city-lists {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.city-lists ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.city-lists li {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #222;
+}
+
+/* See More */
+.see-more {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #111;
+  background-color: #f4f4f4;
+  padding: 12px 20px;
+  border-radius: 999px;
+  transition: background 0.3s ease;
+}
+
+.see-more:hover {
+  background-color: #e1e1e1;
+}

@@ -313,7 +313,7 @@ body {
   text-decoration: underline;
 }
 
-.find-restaurant {
+/* .door {
   display: flex;
   padding-top: 1%;
   justify-content: center;
@@ -322,62 +322,62 @@ body {
   gap: 30px;
 }
 
-.find-restaurant h2 {
+.door h2 {
   text-align: left;
   width: -100%;
 }
 
-.food-banner {
+.image {
   margin-right: 20%;
 }
 
-.find-restaurant-section {
+.door-section {
   margin: 5%;
   margin-left: 10%;
-  /*width:100%; */
+  
 }
 
-.find-restaurant-section h2 {
+.door-section h2 {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 40px;
   line-height: 100%;
   margin-bottom: 4%;
 }
 
-.find-restaurant-section h3 {
+.door-section h3 {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 20px;
   margin-bottom: 3%;
 }
 
-.find-restaurant-section p {
+.door-section p {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
 
-.food-banner img {
+.image img {
   width: 660px;
   height: auto;
-}
+} */
 
 /* june 2 structure updated june3 */
 
-.find-restaurant {
+.door {
   position: relative;
   display: flex;
-  gap: 40%;
+  gap: 20%;
   justify-content: center;
   margin: 0% 40%;
   text-align: left;
   z-index: 2;
 }
 
-.find-restaurant-section {
-  width: 100%;
-  padding: 5%;
+.door-section {
+  width: 400px;
+  padding: 25% 0 0 0;
 }
 
-.find-restaurant-section h2 {
+.door-section h2 {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 40px;
   line-height: 100%;
@@ -386,27 +386,26 @@ body {
   letter-spacing: 1px;
 }
 
-.find-restaurant-section h3 {
+.door-section h3 {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 1.3em;
   margin-bottom: 3%;
   margin-left: 1%;
 }
 
-.find-restaurant-section p {
+.door-section p {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 16px;
-  /*margin-right:9.9%; */
   line-height: 1.5em;
 }
 
-.food-banner img {
-  width: 690px;
+.image img {
+  width: 670px;
   height: auto;
   margin-left: 2%;
 }
 
-.find {
+.btn-door{
   margin-top: 5%;
   margin-left: 1%;
   padding: 10px;
@@ -420,7 +419,7 @@ body {
   padding: 2%;
 }
 
-.find:hover {
+.btn-door:hover {
   background-color: #db210c;
 }
 
@@ -485,10 +484,11 @@ body {
   line-height: 1.5em;
 }
 
-.dash-pass .btn-dash {
+ .btn-dash {
   margin-top: 5%;
   margin-left: 1%;
   padding: 10px;
+  height: 15%;
   background-color: #EB1700;
   color: rgb(255, 255, 255);
   border: none;
@@ -510,11 +510,11 @@ body {
   margin-bottom: 4%;
 }
 
-/*.banner2 img {
+.banner2 img {
   width: 100%;
-  height: 100%;  Match container height 
+  height: 100%;  
   display: block;
-}*/
+}
 
 .banner2-text {
   position: absolute;
@@ -761,3 +761,52 @@ body {
   color: #000000;
 }
 
+
+.banner-buttons{
+  display: flex;
+  gap: 20px;
+}
+.header{
+  padding: 3%;
+  font-family: Roboto,Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  text-align: center;
+}
+.bottom-section p{
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 2% 0%;
+  line-height: 1.5em;
+}
+.region{
+  
+}
+.region h2{
+  margin:3% 0% 2% 0;
+  font-family: Roboto,Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 32px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin: 0 10%;
+  gap: 40px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+   
+}
+
+.tab {
+  margin: 0 5%;
+  width:20%;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+  padding-bottom: 8px;
+  position: relative;
+}
