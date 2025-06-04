@@ -1,50 +1,85 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: 1px solid red;
-}
-body {
-  
-  background-color: #fff;
-}
-.features {
-  font-family: Roboto,'Nunito', sans-serif;
+.container{
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex:1fr 1fr;
+}
+.container h2 {
+  top:20%;
+  font-size: 36px;
+  font-family: Roboto, Arial, sans-serif;
+  margin-bottom: 30px;
+}
+.card-container{
+  display: flex;
+  flex:1fr 1fr;
+}
+.card-container img{
+  width:552px;
+  height:552px;
+}
+
+
+.task-gifting-section {
+  background-color: #fef1ee;
+  padding: 50px 10%;
+  font-family: 'Roboto', Arial, sans-serif;
   text-align: center;
-  padding: 60px 20px;
-  gap: 40px;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: auto;
 }
-.feature-box {
-  flex: 1 1 300px;
-  max-width: 350px;
+
+.task-gifting-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
 }
-.feature-box img {
-  width: 154px;
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  padding: 20px;
+  text-align: center;
+}
+
+.card img {
+  width: 552px;
+  height:552px;
   margin-bottom: 20px;
 }
-.feature-box h2 {
-  font-size: 32px;
-  font-weight: 900;
+
+.card h3 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+
+
+.card p {
+  font-size: 16px;
+  color: #333;
   margin-bottom: 15px;
-  line-height: 1.4;
 }
-.feature-box p {
-  font-size: 18px;
-  margin-bottom: 15px;
-  color: #000000;
+
+.card button.btn {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
-.feature-box a {
-  font-weight: 700;
-  color: #e60012;
-  text-decoration: none;
-  font-size: 18px;
+
+
+.btn {
+  background-color: #eb1700;
 }
-.feature-box a:hover {
-  text-decoration: underline;
+
+.card small {
+  display: block;
+  margin-top: 10px;
+  font-size: 11px;
+  color: #555;
 }
