@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+.main-containor {
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* Prevent scroll from accidental overflows */
+}
+
+/* Section 1: Find Restaurant */
+.find-restaurant {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 4% 8%;
+  gap: 3%;
+  position: relative;
+  z-index: 2;
+}
+
+.find-restaurant-section {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.find-restaurant-section h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.find-restaurant-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.find-restaurant-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.find {
+  padding: 12px 24px;
+  background-color: #EB1700;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.find:hover {
+  background-color: #db210c;
+}
+
+.food-banner img {
+  width: 100%;
+  max-width: 660px;
+  height: auto;
+}
+
+/* Section 2: DashPass Promo */
+.background {
+  position: relative;
+  background-color: rgb(254, 241, 238);
+  width: 100%;
+  padding: 4% 8%;
+  z-index: 1;
+}
+
+.dash-pass {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+  
+}
+
+.dash-pass img {
+  width: 100%;
+  max-width: 660px;
+  height: auto;
+}
+
+.find-restaurant-section1 {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.dash-pass h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.dash-pass p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.btn-dash {
+  padding: 12px 24px;
+  background-color: #EB1700;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-dash:hover {
+  background-color: #db210c;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  top: -100px; /* adjust this value as needed */
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(254, 241, 238);
+  z-index: -1; /* keeps it behind the content */
+}

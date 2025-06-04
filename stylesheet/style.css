@@ -15,10 +15,8 @@ body{
     width: 100%;
     height: 650px;  
 }
-
 .top-container {
-    margin-left:30px;
-    margin-right:60px;
+    margin-right:10px;
     position: absolute;  
     top: 1%;
     left: 0;
@@ -30,7 +28,6 @@ body{
     z-index: 2;
     height:6%;
 }
-
 .logo2 {
     position: absolute;
     left: 41%;
@@ -255,69 +252,47 @@ body{
 } */
  /* june 2 */
 
- .mid-container{
-  margin:2% 15% 3% ;
-  padding: 0;
+.features {
+  font-family: Roboto,'Nunito', sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
-  gap:50px;
-  padding:40px;
-  text-align: center;
-  background-color: #fff;
- }
-.product-container {
-  max-width: 280px;
-  gap: 40px;
-  padding: 30px;
+  padding: 60px 20px;
+  gap: 35px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin:5% 10%;
 }
-.mid-container img{
-  width:100%;
-  max-width: 154px;
-  height:auto;
+.feature-box {
+  flex: 1 1 300px;
+  max-width: 350px;
 }
-/* .img3{
-  position:absolute;
-  top:60%;
-} */
-.header{
-  font-family:"Nunito",Roboto,Arial, Helvetica, sans-serif;
-  font-weight:bold;
-  font-size: 2.25rem;
-  padding-top: 2%;
-  color: #000;
-  display: flex;
-  justify-content: center;
-  line-height: 100%;
-  align-items: center;
-  
+.feature-box img {
+  width: 154px;
+  margin-bottom: 2%;
 }
-
-.details{
-/* width:250px; */
-padding: 5px;
-display: block;
-/* line-height:1.5; */
-font-size:18px;
-font-family:"Nunito", Arial, "Helvetica Neue", Helvetica, sans-serif;
+.feature-box h2 {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 15px;
+  line-height: 1.2;
 }
-
-.mid-container button{
-  margin-top: 5px;
-  outline: none;
-  border:none;
-  background-color: #fff;
-  color: #EB1700;
-  font-family:"Nunito",Roboto,Arial, Helvetica, sans-serif ;
+.feature-box p {
   font-size: 18px;
-  font-weight:900;
-  text-transform:none;
-  text-decoration:none solid rgb(235, 23, 0);
-  text-align:center;
-  text-indent:0px;
+  word-spacing: 1px;
+  margin-bottom: 15px;
+  color: #000000;
 }
-
+.feature-box a {
+  font-weight: 700;
+  color: #e60012;
+  text-decoration: none;
+  font-size: 18px;
+}
+.feature-box a:hover {
+  text-decoration: underline;
+}
 .find-restaurant{
   display: flex;
   padding-top:1%;
@@ -359,4 +334,133 @@ font-family:"Nunito", Arial, "Helvetica Neue", Helvetica, sans-serif;
 .food-banner img{
   width:660px;
   height: auto;
+}
+/* june 2 structure updated june3 */
+
+.main-section{
+  position: relative;
+}
+ .find-restaurant{
+  display: flex;
+  gap:5%; 
+  margin:0% 15% 0% 15%;
+  padding-top:1%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: left;
+  z-index: 2; 
+}
+.find-restaurant-section{
+  width:100%;
+}
+.find-restaurant-section h2{
+  font-family:Roboto,Arial, Helvetica, sans-serif;
+  font-size:40px;
+  line-height: 100%;
+  margin-bottom: 4%;
+  width:9em;
+  letter-spacing:1px ;
+
+}
+.find-restaurant-section h3{
+  font-family:Roboto,Arial, Helvetica, sans-serif;
+  font-size:1.3em;
+  margin-bottom: 3%;
+  margin-left:1%;
+ 
+}
+.find-restaurant-section p{
+  font-family:Roboto,Arial, Helvetica, sans-serif;
+  font-size:16px;
+/*margin-right:9.9%; */
+  line-height: 1.5em;
+}
+.food-banner img{
+  width:690px;
+  height: auto;
+  margin-right:15%;
+} 
+.find{
+  margin-top: 5%;
+  margin-left:1%;
+  padding: 10px;
+  background-color: #EB1700;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-family: Roboto,Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 2%;
+}
+
+.find:hover{
+  background-color: #db210c;
+}
+/* june3 */
+
+.background {
+  background-color: rgb(254, 241, 238);
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  top: -35px; /* how far it extends above */
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(254, 241, 238);
+  z-index: -1;
+}
+.dash-pass {
+  display:flex;
+  gap:5%; 
+  margin:0% 15% 10% 15%;
+  padding-top:4%;
+  padding-bottom: 2%;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+.dash-pass img{
+  width:7250px;
+  height: auto;
+}
+.align{
+  position: relative;
+  top: 30%;
+}
+.dash-pass h2{
+  font-family:Roboto,Arial, Helvetica, sans-serif;
+  font-size:40px;
+  line-height: 100%;
+  margin-bottom: 4%;
+  width:9em;
+  letter-spacing:1px ; 
+}
+.find-restaurant-section1{
+  width: 100%;
+}
+.dash-pass p {
+  font-family:Roboto,Arial, Helvetica, sans-serif;
+  font-size:16px;
+  line-height: 1.5em;
+}
+.dash-pass .btn-dash{
+  margin-top: 5%;
+  margin-left:1%;
+  padding: 10px;
+  background-color: #EB1700;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-family: Roboto,Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 2%;
 }
