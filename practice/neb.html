@@ -3,40 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <title>Tabbed Layout</title>
+  <link rel="stylesheet" href="neb.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+<div class="neighborhood">
   <h2>Get more from your neighborhood</h2>
 
   <div class="tabs">
-    <div class="tab active" data-tab="cities">Top Cities</div>
-    <div class="tab" data-tab="cuisines">Top Cuisines</div>
-    <div class="tab" data-tab="chains">Top Chains</div>
+    <div class="tab active">Top Cities</div>
+    <div class="tab">Top Cuisines</div>
+    <div class="tab">Top Chains</div>
   </div>
 
-  <div class="tab-content active" id="cities">
-    <div class="grid">
-      <div>New York</div><div>Los Angeles</div><div>Toronto</div><div>Chicago</div>
-      <div>Houston</div><div>Brooklyn</div><div>San Diego</div><div>Las Vegas</div>
-      <div>San Francisco</div><div>Seattle</div><div>Atlanta</div><div>Queens</div>
-      <div>Vancouver, BC</div><div>Miami</div><div>San Antonio</div>
-    </div>
+  <div class="city-lists">
+    <ul>
+      <li>New York</li>
+      <li>Houston</li>
+      <li>San Francisco</li>
+      <li>Vancouver, BC</li>
+    </ul>
+    <ul>
+      <li>Los Angeles</li>
+      <li>Brooklyn</li>
+      <li>Seattle</li>
+      <li>Miami</li>
+    </ul>
+    <ul>
+      <li>Toronto</li>
+      <li>San Diego</li>
+      <li>Atlanta</li>
+      <li>San Antonio</li>
+    </ul>
+    <ul>
+      <li>Chicago</li>
+      <li>Las Vegas</li>
+      <li>Queens</li>
+    </ul>
   </div>
 
-  <div class="tab-content" id="cuisines">
-    <div class="grid">
-      <div>Pizza</div><div>Burgers</div><div>Chinese</div><div>Mexican</div>
-      <div>Indian</div><div>Japanese</div><div>Thai</div><div>Greek</div>
-      <div>Korean</div><div>BBQ</div><div>Seafood</div><div>Vegan</div>
-    </div>
+  <div class="see-more">
+    <strong>See more</strong>
+    <span><button class="circle-btn"><i class="fa-solid fa-angle-down"></i></button></span> <!-- Down arrow -->
   </div>
-
-  <div class="tab-content" id="chains">
-    <div class="grid">
-      <div>McDonald's</div><div>Subway</div><div>KFC</div><div>Domino's</div>
-      <div>Panda Express</div><div>Chipotle</div><div>Pizza Hut</div><div>Starbucks</div>
-      <div>Wendy's</div><div>Dunkin'</div><div>Taco Bell</div><div>Five Guys</div>
-    </div>
-  </div>
-  <div class="see-more">See more ⌄</div>
+</div>
 </body>
 </html>
