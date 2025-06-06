@@ -1,0 +1,779 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* hidden portion till 770px */
+.app-promo {
+  display: none;
+  background-color: white;
+  padding: 10px 15px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+}
+
+.app-promo img {
+  width: 40px;
+  height: 40px;
+}
+
+.promo-text {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.open-btn {
+  background-color: #EB1700;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* ////////////////////////////// */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease-in-out;
+  transform: scale(1); /* Default scale */
+}
+
+/* Top bar */
+.top-container {
+  position: absolute;
+  top: .6vw;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  padding: 0 2vw;
+}
+
+/* Centered logo */
+.logo2 {
+  height: auto;
+  max-height: 55px; /* default size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo2 img {
+  max-height :120%;
+  height:90%;
+  width: 60%;
+}
+/* Align buttons to the right */
+.banner-buttons {
+  position: absolute;
+  top: 50%;
+  right: 2vw;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+/* Button styles */
+.btn-n {
+  padding: 10px 10px;
+  font-size: 1vw;
+  font-weight: bold;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sign-in {
+  background-color: #EB1700;
+  color: white;
+  width: 87px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.sign-in:hover {
+  background-color: rgb(211, 30, 18);
+}
+
+.sign-up {
+  background-color: #ffffff;
+  color: #606060;
+  font-size: 18px;
+  width: 90px;
+  height: 40px;
+}
+/* june 6 */
+/* HEADING TEXT */
+.heading {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family:'Roboto',"Segoe UI", "Anton";
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  white-space: nowrap; /* Prevents wrapping */
+  flex-shrink: none;
+}
+
+/* SEARCH BAR */
+.search-bar {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 40px;
+  padding: 6px 12px;
+  width: 360px;
+  height: 48px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+  transition: border 0.3s ease;
+}
+
+.search-bar:hover {
+  border: 2px solid #1239e6;
+}
+
+/* ICON */
+.location-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* TEXT INPUT */
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family:'Roboto', sans-serif;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.search-input::placeholder {
+  color: #555;
+  font-size: 16px;
+}
+
+/* SEARCH BUTTON */
+.search-btn {
+  background-color: #EB1700;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-btn .arrow img {
+  width: 18px;
+  height: 18px;
+}
+
+/* SIGN IN FOR SAVED ADDRESS */
+.sign {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 40px;
+  padding: 10px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.user {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.save-address {
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.features {
+  font-family: Roboto, 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  padding: 60px 20px;
+  gap: 35px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 5% 10%;
+}
+
+.feature-box {
+  flex: 1 1 300px;
+  max-width: 350px;
+}
+
+.feature-box img {
+  width: 154px;
+  margin-bottom: 2%;
+}
+
+.feature-box h2 {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.feature-box p {
+  font-size: 18px;
+  word-spacing: 1px;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.feature-box a {
+  font-weight: 700;
+  color: #e60012;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.feature-box a:hover {
+  text-decoration: underline;
+}
+
+/* //////////////////////////// */
+.door {
+  position: relative;
+  display: flex;
+  gap: 20%;
+  justify-content: center;
+  margin: 0% 40%;
+  text-align: left;
+  z-index: 2;
+}
+
+.door-section {
+  width: 400px;
+  padding: 25% 0 0 0;
+}
+
+.door-section h2 {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  line-height: 100%;
+  margin-bottom: 4%;
+  width: 9em;
+  letter-spacing: 1px;
+}
+
+.door-section h3 {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+  margin-bottom: 3%;
+  margin-left: 1%;
+}
+
+.door-section p {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+.image img {
+  width: 670px;
+  height: auto;
+  margin-left: 2%;
+}
+
+.btn-door{
+  margin-top: 5%;
+  margin-left: 1%;
+  padding: 10px;
+  background-color: #EB1700;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 2%;
+}
+
+.btn-door:hover {
+  background-color: #db210c;
+}
+
+.background {
+  background-color: rgb(254, 241, 238);
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  top: -35px;
+  /* how far it extends above */
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(254, 241, 238);
+  z-index: -1;
+}
+
+.dash-pass {
+  display: flex;
+  gap: 5%;
+  margin: 0% 15% 0% 15%;
+  padding-top: 4%;
+  padding-bottom: 2%;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.dash-pass img {
+  width: 725px;
+  height: auto;
+}
+
+.align {
+  position: relative;
+  top: 30%;
+}
+
+.dash-pass h2 {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  line-height: 100%;
+  margin-bottom: 4%;
+  width: 9em;
+  letter-spacing: 1px;
+}
+
+.find-restaurant-section1 {
+  width: 100%;
+}
+
+.dash-pass p {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+ .btn-dash {
+  margin-top: 5%;
+  margin-left: 1%;
+  padding: 10px;
+  height: 15%;
+  background-color: #EB1700;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 2%;
+}
+
+
+
+/* responsive top-container*/
+
+@media screen and (max-width: 960px) and (min-width: 770px) {
+  .logo2 {
+    height: 40px !important;
+  }
+
+  .logo2 img {
+    height: 100% !important;
+    width: auto !important;
+  }
+
+  .btn-n {
+    padding: 6px 7px !important;
+    font-size: 12px !important;
+  }
+
+  .banner-img{
+    height:100%;
+  }
+  .top-container {
+    top: 1vw !important;
+    padding: 0 1.5vw !important;
+  }
+}
+
+  @media screen and (max-width: 770px) and (min-width:200px) {
+  .app-promo {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 8px 10px 8px;
+  }
+   
+  .app-promo img {
+    display: flex;
+    height: 100%;
+    width: 70px;
+    border: 1px solid rgba(181, 175, 175, 0.24);
+    border-radius: 15%;
+    box-shadow: 5px rgba(128, 128, 128, 0.299);
+  }
+  .promo-text{
+    display: flex row;
+    padding:2px;
+  }
+  .promo-text p{
+    color: #606060;
+  }
+
+  .banner-img{
+    height: 100%;
+    transform: scale(1.1);
+  }
+
+  .top-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  
+  /* Logo2 - move near center */
+  .logo2 {
+    position: absolute !important;
+    top: 150px !important; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px !important;
+  }
+
+  .logo2 img {
+    height: 100% !important;
+    width: auto;
+    display: block;
+  }
+
+  /* Banner Buttons - top right corner */
+  .banner-buttons {
+    position: absolute !important;
+    top: 0.8vw !important;
+    right: 2vw;
+    transform: none !important;
+    display: flex;
+  }
+
+  
+  /* Button label switch */
+  .sign-in span,
+  .sign-up span {
+    color: transparent;
+    position: relative;
+    display:inline;
+  }
+
+  .sign-in span::before,
+  .sign-up span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center !important;
+    font-weight: bold;
+    white-space: nowrap;
+    pointer-events: none;
+    font-size: 15px;
+  }
+
+  .sign-in span::before {
+    content: "Login";
+    color: white;
+    text-align: center;
+  }
+
+  .sign-up span::before {
+    content: "Open App";
+    color: #606060;
+    text-align: center
+  }
+  .sign-up span{
+    right:8px
+  }
+
+  .sign-in,
+  .sign-up {
+    height: 35px;
+    font-size: 14px;
+    padding: 0 12px;
+    text-align: center;
+  }
+
+
+}
+
+/* Zoom in the image as screen size shrinks */
+@media screen and (max-width: 1024px) {
+  .banner-img {
+    transform: scale(1.05);
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .heading{
+    font-size: 20px !important;
+    white-space: nowrap;
+    left:50%;
+    transform:translateX(-50%);
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner-img {
+    transform: scale(1.2);
+  }
+  .heading-text {
+    font-size: 20px !important;
+    white-space: normal;
+    display: inline-block;
+    max-width: 100%;
+    
+  }
+}
+/* Between 770px and 200px */
+@media screen and (max-width: 770px) and (min-width: 200px) {
+
+  .banner{
+    height :510px;
+  }
+    .logo2 {
+    position: absolute !important;
+    top: 135px !important; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px !important;
+  }
+  .logo2 img {
+    height: 100% !important;
+    width: auto;
+    display: block;
+  }
+  .heading-text {
+    font-size: 30px;
+    white-space: normal;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .heading{
+   top:180px;
+  }
+
+  .heading-break {
+    display: inline;
+  }
+  .heading-break::before {
+    content: "\A"; /* Line break */
+    white-space: pre;
+  }
+  .search-bar {
+    width: 300px;
+    left: 50%;
+    top: 50%; /* adjust if needed */
+    padding: 20px;
+  }
+  .location-icon {
+    content: url('img/search.png'); /* Replace with your search icon path */
+    width: 20px;
+    height: 20px;
+  }
+  .search-btn {
+    background-color: transparent;
+    box-shadow: none;
+    width: auto;
+    height: auto;
+    margin-left: 10px;
+  }
+  .search-btn .arrow img {
+    content: url('img/black-arrow.png'); /* Replace with your black arrow icon path */
+    width: 20px;
+    height: 20px;
+  }
+}
+@media screen and (max-width: 770px) and (min-width: 250px) {
+
+  .sign-in {
+    background-color: white !important;
+    color: black !important;
+  }
+  .sign-up {
+    background-color: #EB1700 !important;
+    color: white !important;
+  }
+  /* Button text replacement via pseudo-elements */
+  .sign-in span,
+  .sign-up span {
+    color: transparent;
+    position: relative;
+    display: inline-block;
+  }
+  .sign-in span::before,
+  .sign-up span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  .sign-in span::before {
+    content: "Log in";
+    color: black;
+  }
+  .sign-up span::before {
+    content: "Open App";
+    color: white;
+  }
+}
+@media screen and (max-width: 960px) {
+
+  .sign{
+    top:340px;
+    width:110px;
+  }
+  .save-address {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .save-address::before {
+    content: "Sign In";
+    color: black;
+    font-weight: bold;
+  }
+  .save-address::after {
+    content: ""; /* hide default long text */
+  }
+  .save-address {
+    color: transparent; /* Hide original text */
+    position: relative;
+  }
+  .save-address::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: black;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 770px) {
+  .sign {
+    top: 310px;
+    width: 100px;
+  }
+  .save-address {
+    font-size: 14px;
+    white-space: nowrap;
+    color: transparent; /* Hide original text */
+    position: relative;
+  }
+  .save-address::before {
+    content: "Log In";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+  }
+  .save-address::after {
+    content: ""; /* Hide the original long text */
+  }
+}
+@media screen and (max-width: 1180px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px !important; /* Reduced from 35px or higher */; /* Reduced from 35px or higher */
+    margin:45px 0 45px 0px!important;
+    padding:0px 0px !important;
+  }
+ .feature-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px !important;
+  max-width: 100%;
+  max-height:180px !important;
+  padding: 1px 20px !important;   /* more internal spacing */
+  text-align: left;
+ 
+}
+  .feature-box img {
+    width: 150px;
+    min-width: 80px;
+    margin-bottom: 0;
+  }
+  .feature-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .feature-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .feature-text p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .feature-text a {
+    font-size: 16px;
+  }
+}
+/* /////////// */
