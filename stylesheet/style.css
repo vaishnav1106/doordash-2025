@@ -444,88 +444,36 @@ body {
 
 .convenience {
   display: flex;
-  padding-top: 1%;
-  justify-content: center;
   align-items: center;
-  text-align: left;
-  gap: 30px;
-}
-
-.convenience h2 {
-  text-align: left;
-  width: -100%;
-}
-
-.convenience img {
-  margin-right: 20%;
-}
-
-.text1 {
-  margin: 5%;
-  margin-left: 10%;
-  /*width:100%; */
-}
-
-.convenience h2 {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  font-size: 40px;
-  line-height: 100%;
-  margin-bottom: 4%;
-}
-
-.convenience p {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  font-size: 16px;
-}
-
-.convenience img {
-  width: 660px;
-  height: auto;
-}
-
-.convenience {
-  position: relative;
-  display: flex;
-  gap: 40%;
   justify-content: center;
-  margin: 0% 41%;
+  padding: 5% 10%;
+  gap: 5%;
   text-align: left;
+  position: relative;
   z-index: 2;
 }
 
 .text1 {
-  width: 100%;
-  padding: 5%;
+  flex: 1;
 }
 
 .text1 h2 {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 40px;
-  line-height: 100%;
+  line-height: 1.2;
   margin-bottom: 5%;
-  width: 9em;
-  letter-spacing: 1px;
-
+  letter-spacing: 0.5px;
 }
 
 .text1 p {
   font-family: Roboto, Arial, Helvetica, sans-serif;
-  margin-bottom: 5%;
   font-size: 16px;
-  width: 25em;
   line-height: 1.5em;
-}
-
-.convenience img {
-  width: 690px;
-  height: auto;
-  margin-left: 2%;
+  margin-bottom: 5%;
+  max-width: 500px;
 }
 
 .shop {
-  /* margin-top: 5%;
-  margin-left:1%; */
-  padding: 30px;
   background-color: #EB1700;
   color: #fff;
   border: none;
@@ -533,12 +481,20 @@ body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 16px;
-  padding: 2%;
+  padding: 14px 28px;
+  cursor: pointer;
 }
 
 .shop:hover {
   background-color: #db210c;
 }
+
+.convenience img {
+  flex: 1;
+  max-width: 660px;
+  height: auto;
+}
+
 
 /* card */
 .task-gifting-section {

@@ -352,7 +352,7 @@ body {
   position: relative;
   z-index: 0;
  /* Pull background up over 30% of image height */
-  padding-top: 30%;
+  padding-top: 2%;
 }
 
 .background::before {
@@ -419,67 +419,217 @@ body {
 .banner2 {
   position: relative;
   width: 100%;
-  height: 600px;
-  /* Set image height */
+  height: auto;
   overflow: hidden;
   margin-bottom: 4%;
 }
 
 .banner2 img {
   width: 100%;
-  height: 100%;  
+  height: 600px;
   display: block;
+  object-fit: cover;
 }
 
+/* Overlay container */
 .banner2-text {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Full black overlay with transparency */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  color: white;
-  text-align: center;
-  padding: 2em;
+  justify-content: center;
   box-sizing: border-box;
 }
 
-.banner2-text h3 {
-  font-size: 40px;
-  margin: 10px 0;
-  font-family: Arial, sans-serif;
+/* Text content box inside the overlay */
+.texts {
+  margin: 146px 0px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: clamp(210px, 70vw, 550px);
+  height: clamp(150px, 40vw, 310px);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
-.banner2-text h4 {
-  font-size: 20px;
-  margin: 20px 0;
-  font-family: Arial, sans-serif;
+/* Text styles */
+.texts h2 {
+  font-size: 40px !important;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0 0 0;
+  /* line-height: 1.3; */
+  letter-spacing: 2px;
 }
 
-.banner2-text p {
-  font-size: 16px;
-  margin: 10px 0;
-  font-family: Arial, sans-serif;
+.texts h3 {
+  font-size: clamp(16px, 4vw, 20px);
+  margin: 10px 0 0 0;
+  font-weight: 500;
 }
 
-.banner2-text button {
-  margin-top: 10px;
-  padding: 10px 20px;
+.texts p {
+  font-size: clamp(14px, 3.5vw, 16px);
+  margin: 10px 0 0 0;
+  line-height: 1.4;
+}
+
+/* Button */
+.texts button {
+  margin-top: 8px;
+  padding: 15px 15px;
   background-color: #EB1700;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 25px;
   font-weight: bold;
-  font-size: 16px;
+  width:160px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(14px, 4vw, 16px);
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .banner2-text button:hover {
   background-color: #c61300;
+}
+/* //////////////////////////////////////// */
+.convenience {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5% 10%;
+  gap: 5%;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+.text1 {
+  flex: 1;
+}
+.text1 h2 {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 5%;
+  letter-spacing: 0.5px;
+}
+.text1 p {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  margin-bottom: 5%;
+  max-width: 500px;
+}
+.shop {
+  background-color: #EB1700;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 14px 28px;
+  cursor: pointer;
+}
+.shop:hover {
+  background-color: #db210c;
+}
+.convenience img {
+  flex: 1;
+  max-width: 660px;
+  height: auto;
+  margin: 0 5%;
+}
+/* //////////////card////////////////// */
+
+/* card */
+.task-gifting-section {
+  background-color: #fef1ee;
+  padding: 50px 5%;
+  font-family: 'Roboto', Arial, sans-serif;
+  text-align: center;
+}
+
+.task-gifting-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: #111;
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center; /* Centers cards inside grid */
+  margin:0;
+  padding: 0;
+  
+}
+
+/* Individual Card */
+.card {
+  padding: 20px 20px;
+  max-width: 552px;
+  width: 100%;
+  max-width:670px;
+  height:100%;
+ 
+}
+
+.card img {
+  width: 100%;
+  max-height: 60vw; /* Shrinks height as width shrinks */
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* Card Text */
+.card h3 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #1c1c1c;
+}
+
+.card p {
+  font-size: 16px;
+  color: #191919;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.card button.btn {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: #eb1700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card button.btn:hover {
+  background-color: #c61300;
+}
+
+.card small {
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
 }
 
 
@@ -690,16 +840,42 @@ body {
   .save-address::after {
     content: ""; /* Hide the original long text */
   }
-}
+
+  
+  /* //////////////////////////////////// */
+
+  .banner2 img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+
   /* //////////////////////// */
 
+.texts {
+    width: clamp(210px, 95vw, 570px);
+    height: 210px;
+    margin: 40px 0;
+  }
+  .texts h2 {
+    font-size: 24px !important;
+  }
+  .texts #br{
+    display:none;
+  }
 
+  .texts h3 {
+    font-size: 18px;
+  }
+
+  .texts p {
+    font-size: 14px;
+  }
+}
 /* Show only on small screens */
 @media screen and (max-width: 770px) {
 
-  .body{
-    margin: 0;
-  }
+
   .app-promo-mobile {
     display: flex;
     align-items: center;
@@ -795,15 +971,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto 10px auto !important;
+    margin: 0 0 10px 0 !important;
     width: 100%;
-    max-width: 95%;
+    max-width: 850px;
     padding: 0;
     box-sizing: border-box;
   }
   .image img,
   .dash-pass img {
-    width: clamp(120px, 95vw, 695px) !important;
+    width: clamp(120px, 95vw, 780px) !important;
     height: 240px;
     display: block;
     margin-bottom: 16px;
@@ -855,6 +1031,7 @@ body {
     top:-80% !important;
     padding: 50% 0;
   }
+  
 }
 /* Zoom in the image as screen size shrinks */
 @media screen and (max-width: 1024px) {
@@ -991,6 +1168,11 @@ body {
     color: #e60012;
     font-weight: 700;
   }
+
+  .door-section p br,
+  .dash-pass p br{
+    display: none;
+  }
 }
 /* /////////// */
 @media screen and (max-width: 1150px) and (min-width: 770px) {
@@ -1028,4 +1210,113 @@ body {
     margin-left:50px;
   }
 }
+/* ---------- Medium Screens (770px to 960px) ---------- */
+@media screen and (max-width: 960px) {
+  .convenience {
+    padding: 5% 5%;
+    gap: 4%;
+  }
+
+  .text1 h2 {
+    font-size: 34px;
+  }
+
+  .text1 p {
+    font-size: 15px;
+  }
+
+  .shop {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+
+  .convenience img {
+    max-width: 520px;
+  }
+}
+/* ---------- Small Screens (Below 770px) ---------- */
+@media screen and (max-width: 770px) {
+  .convenience {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+    max-width: 95%;
+    margin: 0 auto 10px auto;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  .convenience img {
+    width:100%  !important;
+    max-width: 1000px;
+    height: 100% !important;
+    max-height:180px;
+    object-fit: cover;
+    display: block;
+    margin: 0 0 16px 0;
+    
+  }
+
+  .text1 {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 5px;
+    padding: 0 0px;
+    text-align: left;
+  }
+
+  .text1 h2 {
+    font-size: clamp(24px, 20vw, 24px);
+    line-height: 1.3;
+    margin-bottom: 8px;
+    max-width: 900px;
+    width: 100%;
+  }
+  .text1 h2 br{
+    display: none;
+  }
+  .text1 p br{
+    display: none;
+  }
+
+  .text1 p {
+    font-size: clamp(14px, 50vw, 16px);
+    line-height: 1.5;
+    width:100%;
+    max-width: 302px;
+    margin-bottom: 8px;
+  }
+
+  .shop {
+    font-size: clamp(13px, 3.5vw, 16px);
+    padding: 5px 20px;
+    border-radius: 25px;
+    margin-top: 8px;
+  }
+}
+
+/* @media screen and (max-width: 1170px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .card-grid {
+    max-width: 1194px;
+    height: 826px;
+    
+    box-sizing: border-box;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    max-height: 552px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+} */
 

@@ -1,0 +1,191 @@
+
+/* ---------------------------------- */
+/* 🌐 Global Reset & Base Styles     */
+/* ---------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* ---------------------------------- */
+/* 📱 App Promo Section               */
+/* ---------------------------------- */
+.app-promo,
+.app-promo-mobile {
+  display: none;
+  background-color: white;
+  padding: 10px 15px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+}
+
+.app-promo img,
+.app-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+}
+
+.promo-text,
+.app-details {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.open-btn,
+.continue-btn {
+  background-color: #EB1700;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.continue-btn {
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 999px;
+  width: 100%;
+}
+
+.continue-btn:hover {
+  background-color: #c41400;
+}
+
+
+/* ---------------------------------- */
+/* 🖼️ Banner and Header              */
+/* ---------------------------------- */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease-in-out;
+  transform: scale(1);
+}
+
+.top-container {
+  position: absolute;
+  top: 0.6vw;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  padding: 0 2vw;
+}
+
+.logo2 {
+  max-height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo2 img {
+  max-height: 120%;
+  height: 90%;
+  width: 60%;
+}
+
+.banner-buttons {
+  position: absolute;
+  top: 50%;
+  right: 2vw;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 10px;
+}
+Vaishnav is just trying to make this code session more memorable so that no one can say we are not doing great so lets play with this think and so for that we think lets have some great effort for it as suitable we can live but for now i am just moving through the efforts and genuin  draws :horizontal
+klfdgjj hoe 
+ .fdkgodf fdgjojolo000gk
+{
+  fgfg:fdgg;
+  dfg:dfgdf;
+  dfg:none;
+  container:inherit
+}
+  /* ---------------------------------- */
+/* 🔘 Banner Buttons and Auth        */
+/* ---------------------------------- */
+.btn-n {
+  padding: 10px 10px;
+  font-size: 1vw;
+  font-weight: bold;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sign-in {
+  background-color: #EB1700;
+  color: white;
+  width: 87px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.sign-in:hover {
+  background-color: rgb(211, 30, 18);
+}
+
+.sign-up {
+  background-color: #ffffff;
+  color: #606060;
+  font-size: 18px;
+  width: 90px;
+  height: 40px;
+}
+
+.sign {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 40px;
+  padding: 10px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.user {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.save-address {
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+}
