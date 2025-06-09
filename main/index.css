@@ -218,13 +218,11 @@ body {
   font-family: Roboto, Arial, sans-serif;
   font-weight: bold;
 }
-
 .user {
   width: 20px;
   height: 20px;
   margin-right: 8px;
 }
-
 .save-address {
   border: none;
   background-color: transparent;
@@ -285,7 +283,6 @@ body {
 .feature-box a:hover {
   text-decoration: underline;
 }
-
 /* //////////////////////////// */
 .door {
   position: relative;
@@ -380,17 +377,14 @@ body {
   align-items: center;
   text-align: left;
 }
-
 .dash-pass img {
   width: 725px;
   height: auto;
 }
-
 .align {
   position: relative;
   top: 30%;
 }
-
 .dash-pass h2 {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 40px;
@@ -399,17 +393,14 @@ body {
   width: 9em;
   letter-spacing: 1px;
 }
-
 .find-restaurant-section1 {
   width: 100%;
 }
-
 .dash-pass p {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5em;
 }
-
  .btn-dash {
   margin-top: 5%;
   margin-left: 1%;
@@ -699,32 +690,48 @@ body {
   .save-address::after {
     content: ""; /* Hide the original long text */
   }
+}
   /* //////////////////////// */
+
+
+/* Show only on small screens */
 @media screen and (max-width: 770px) {
+
+  .body{
+    margin: 0;
+  }
   .app-promo-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f7f7f7;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 12px auto; /* ✅ Center horizontally */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.212);
+    font-family: 'Roboto', sans-serif;
+    gap: 10px;
+    max-width: 300px;
+  }
+
+  .app-info {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #f7f7f7;
-    border-radius: 14px;
-    padding: 16px;
-    margin: 20px 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.24);
-    font-family: 'Roboto', sans-serif;
     gap: 12px;
   }
 
   .app-logo {
-    width: 30px;
-    height: 30px;
-    top: 1%;
+    width: 50px;
+    height: 50px;
     border-radius: 12px;
-    background-color: #fff;
     flex-shrink: 0;
   }
 
   .app-details {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   .app-details h4 {
@@ -742,10 +749,9 @@ body {
   .rating {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     font-size: 14px;
     color: #606060;
-    margin: 4px 0;
   }
 
   .stars {
@@ -754,6 +760,7 @@ body {
   }
 
   .continue-btn {
+    align-items: center;
     background-color: #EB1700;
     color: white;
     border: none;
@@ -761,16 +768,13 @@ body {
     padding: 12px;
     font-weight: bold;
     font-size: 15px;
-    margin-top: 8px;
-    cursor: pointer;
     width: 100%;
-    /* max-width: 200px; */
+    cursor: pointer;
   }
 
   .continue-btn:hover {
     background-color: #c41400;
   }
-}
 
   /* /////////////////////// */
   .main-section {
@@ -844,15 +848,14 @@ body {
     margin-bottom: 5% !important;
    }
    .background{
-    padding-top: 10px;
+    padding-top: 0px;
    padding-bottom: 20px !important;
    }
   .background::before{
     top:-80% !important;
-    padding: 35% 0;
+    padding: 50% 0;
   }
 }
-
 /* Zoom in the image as screen size shrinks */
 @media screen and (max-width: 1024px) {
   .banner-img {
