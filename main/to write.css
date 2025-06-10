@@ -1,0 +1,79 @@
+@media screen and (max-width: 769px) and (min-width: 200px) {
+  .task-gifting-section {
+    padding: 0;
+    margin: 0;
+    margin-top:10px;
+    padding-top:30px;
+    height: 520px; /* Total height including bg */
+    background-color: #fef1ee;
+  }
+
+  .task-gifting-section h2 {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0;
+  }
+
+  .card-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 20px;
+    
+    gap:10px;
+  }
+
+  .card {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    width:100%;
+    max-width: 680px;
+    height: 402px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding:1px;
+    margin:0%;
+  }
+
+  .card img {
+    width: 100%;
+    max-width:680px;
+    height: 180px;
+    object-fit: cover;
+    margin:0 0 10px 30px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0 6px;
+  }
+
+  .card p {
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+    padding: 0 10px;
+    margin-bottom: 8px;
+  }
+
+  .card button.btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 20px;
+    background-color: #eb1700;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .card small {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}

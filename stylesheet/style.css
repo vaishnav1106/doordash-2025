@@ -579,6 +579,7 @@ body {
   padding: 2% 0%;
   line-height: 1.5em;
 }
+
 /* june 5 */
 .neighborhood {
   text-align: center;
@@ -594,6 +595,10 @@ body {
   letter-spacing: .1em;
 }
 
+
+
+
+/* ////////tomorrow writing/////////// */
 /* Tabs */
 .tabs {
   display: flex;
@@ -630,7 +635,7 @@ body {
 }
 
 /* City Lists */
-.city-lists {
+.lists {
   display: flex;
   justify-content: left;
   gap: 180px;
@@ -641,13 +646,13 @@ body {
   font-weight: 550px;
 }
 
-.city-lists ul {
+.lists ul {
   list-style: none;
   padding: 0;
   text-align: left;
 }
 
-.city-lists li {
+.lists li {
   margin: 5px 0;
   font-size: 16px;
   color: #222;
