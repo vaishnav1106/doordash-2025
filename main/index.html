@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="index.css" />
 </head>
 
@@ -204,7 +206,7 @@
       </div>
     </div>
   </div>
-  <div class="" bottom-section>
+  <div class="main-section">
     <div class="header">
       <h3>Unlocking opportunity for <br> Dasher and business</h3>
     </div>
@@ -226,7 +228,7 @@
     <div class="background">
       <div class="dash-pass">
         <img src="img/work_with_doordash_desktop.png" alt="work with doordash">
-        <div class="door-ssection1">
+        <div class="door-ssection">
           <h2>Grow your business with DoorDash</h2>
           <p>Business large and small partner with DoorDash to
             <br> reach new customers, increase order volume, and drive
@@ -237,6 +239,383 @@
       </div>
     </div>
   </div>
+  <!-- /////////////////Table(june 11)////////////////// -->
+  <div class="services">
+    <h2>Get more from your neighborhood</h2>
+    <div class="tabs">
+      <div class="tab active" data-tab="cities">Top Cities</div>
+      <div class="tab" data-tab="cuisines">Top Cuisines</div>
+      <div class="tab" data-tab="chains">Top Chains</div>
+
+    </div>
+    <div class="tab-content active" id="cities">
+      <div class="lists">
+
+        <ul>
+          <li>New York</li>
+          <li>Houston</li>
+          <li>San Francisco</li>
+          <li>Vancouver</li>
+        </ul>
+
+        <ul>
+          <li>Los Angeles</li>
+          <li>Brooklyn</li>
+          <li>Seattle</li>
+          <li>Miami</li>
+        </ul>
+
+        <ul>
+          <li>Toronto</li>
+          <li>San Diego</li>
+          <li>Atlanta</li>
+          <li>San Antonio</li>
+        </ul>
+
+        <ul>
+          <li>Chicago</li>
+          <li>Las Vegas</li>
+          <li>Queens</li>
+          <ul class="hidden-city-row">
+            <li>Tallahassee</li>
+          </ul>
+        </ul>
+
+      </div>
+      <div class="lists extra-cities " id="extra-cities">
+
+        <ul>
+          <li>Bend</li>
+          <li>Kamloops</li>
+          <li>Tulsa</li>
+          <li>Austin</li>
+          <li>Salt Lake City</li>
+          <li>Jacksonville</li>
+        </ul>
+        <ul>
+          <li>Colorado Spring</li>
+          <li>Wilmington</li>
+          <li>Birmingham</li>
+          <li>New Orleans</li>
+          <li>Lexington</li>
+          <li>Orlando</li>
+        </ul>
+        <ul>
+          <li>Victoria</li>
+          <li>Columbia</li>
+          <li>Scottsdale</li>
+          <li>Augusta</li>
+          <li>Christchurch</li>
+          <li>Milwaukee</li>
+        </ul>
+        <ul>
+          <li>Pittsburgh</li>
+          <li>Ft.Worth</li>
+          <li>Huntsville</li>
+          <li>Des Moines</li>
+          <li>Quebec</li>
+          <li>All Cities</li>
+        </ul>
+
+      </div>
+      <div class="see-more">
+        <strong>See more</strong>
+        <span><button class="circle-btn"><i class="fa-solid fa-angle-down"></i></button></span> <!-- Down arrow -->
+      </div>
+    </div>
+    <!-- For Cuisines -->
+    <div class="tab-content" id="cuisines">
+      <div class="lists">
+        <ul>
+          <li>Pizza</li>
+          <li>Thai Food</li>
+          <li>Dessert</li>
+          <li>Vegan Food</li>
+        </ul>
+        <ul>
+          <li>Chinese Food</li>
+          <li>Lunch</li>
+          <li>Burger</li>
+          <li>Sandwiches</li>
+        </ul>
+        <ul>
+          <li>Sushi</li>
+          <li>Seafood</li>
+          <li>Asian Food</li>
+          <li>Restaurants</li>
+        </ul>
+        <ul>
+          <li>Cafe</li>
+          <li>Indian Food</li>
+          <li>Italian Food</li>
+          <li>Mediterranean</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- For Chains -->
+    <div class="tab-content" id="chains">
+      <div class="lists">
+        <ul>
+          <li>Dunkin'</li>
+          <li>Burger King</li>
+          <li>Taco Bell</li>
+          <li>Starbucks</li>
+        </ul>
+        <ul>
+          <li>Wingstop</li>
+          <li>Popeyes</li>
+          <li>McDonald's</li>
+          <li>7-Eleven</li>
+        </ul>
+        <ul>
+          <li>Wendy's</li>
+          <li>Chick-fil-A</li>
+          <li>Dollar General</li>
+          <li>Panda Express</li>
+        </ul>
+        <ul>
+          <li>Subway</li>
+          <li>Walgreens</li>
+          <li>Chipotle</li>
+          <li>KFC</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    //         document.addEventListener("DOMContentLoaded", function () {
+    //     const tabs = document.querySelectorAll(".tab");
+    //     const tabContents = document.querySelectorAll(".tab-content");
+
+    //     tabs.forEach(tab => {
+    //         tab.addEventListener("click", function () {
+    //             tabs.forEach(t => t.classList.remove("active"));
+    //             this.classList.add("active");
+
+    //             tabContents.forEach(content => content.style.display = "none");
+
+    //             const selectedTab = this.getAttribute("data-tab");
+    //             const selectedContent = document.getElementById(selectedTab);
+
+    //             if (selectedContent) {
+    //                 selectedContent.style.display = "block";
+    //             }
+    //         });
+    //     });
+
+    //     const seeMoreButton = document.querySelector(".see-more .circle-btn");
+    //     if (seeMoreButton) {
+    //         seeMoreButton.addEventListener("click", function () {
+    //             const extraCities = document.getElementById("extra-cities");
+    //             if (extraCities) {
+    //                 extraCities.classList.toggle("active");
+    //             }
+    //         });
+    //     }
+    // });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const tabs = document.querySelectorAll(".tab");
+      const tabContents = document.querySelectorAll(".tab-content");
+      const seeMoreButton = document.querySelector(".see-more .circle-btn");
+      const extraCities = document.getElementById("extra-cities");
+
+      tabs.forEach(tab => {
+        tab.addEventListener("click", function () {
+          const selectedTab = this.getAttribute("data-tab");
+
+          // Switch active tab
+          tabs.forEach(t => t.classList.remove("active"));
+          this.classList.add("active");
+
+          // Hide all content blocks
+          tabContents.forEach(content => content.style.display = "none");
+
+          // Show the selected one
+          const selectedContent = document.getElementById(selectedTab);
+          if (selectedContent) {
+            selectedContent.style.display = "block";
+          }
+
+          // Show "See More" only on 'cities' tab
+          if (selectedTab === "cities") {
+            document.querySelector(".see-more").style.display = "inline-flex";
+          } else {
+            document.querySelector(".see-more").style.display = "none";
+          }
+
+          // Always hide extra cities when switching tabs
+          if (extraCities) {
+            extraCities.classList.remove("active");
+          }
+        });
+      });
+
+      // See More toggle
+      if (seeMoreButton) {
+        seeMoreButton.addEventListener("click", function () {
+          if (extraCities) {
+            extraCities.classList.toggle("active");
+          }
+        });
+      }
+    });
+  </script>
+
 </body>
+<div class="footer-main-section">
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-section">
+        <h4>Popular Categories</h4>
+        <div class="footer-link-grid">
+          <ul>
+            <li>Alcohol Australia</li>
+            <li>Alcohol Delivery Australia</li>
+            <li>Back To School Delivery</li>
+            <li>Battles of The Brands</li>
+            <li>Beauty Stores</li>
+            <li>Beauty Supply</li>
+            <li>Catering Near Me</li>
+            <li>Chips Ahoy Big Cookie</li>
+            <li>Convenience Stores Canada</li>
+          </ul>
+          <ul>
+            <li>Dashmart Near Me</li>
+            <li>Deck The Doorstep</li>
+            <li>Diageo Holiday</li>
+            <li>Drugstores Canada</li>
+            <li>Flower Delivery</li>
+            <li>Grocery Delivery Canada</li>
+            <li>Grocery Retail Conveniences</li>
+            <li>Haleon Well Within Reach</li>
+            <li>Halloween</li>
+          </ul>
+          <ul>
+            <li>Holiday Hosting</li>
+            <li>Hsa Bank</li>
+            <li>Hsa Fsa Store</li>
+            <li>Large Group Orders</li>
+            <li>Local Eats Deserve Pepsi</li>
+            <li>Make It Date Night</li>
+            <li>Medicine Delivery</li>
+            <li>Mothers Day</li>
+            <li>Pet Store Near Me</li>
+          </ul>
+          <ul>
+            <li>Play For An Ultra</li>
+            <li>Procter Gamble</li>
+            <li>Retail Store Near Me</li>
+            <li>Seasonal Holiday</li>
+            <li>Snap Ebt</li>
+            <li>Valentines Day</li>
+            <li>Winter Holiday</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-subsection">
+        <div class="column">
+          <h4>GEt To Know Us</h4>
+          <ul>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Investors</li>
+            <li>Company Blog</li>
+            <li>Engineering Blog</li>
+            <li>Merchant Blog</li>
+            <li>Gift Cards</li>
+            <li>Package Pickup</li>
+            <li>Promotion Pickup</li>
+            <li>Dasher Central</li>
+            <li>LinkedinIn</li>
+            <li>Glassdoor</li>
+            <li>Accessibility</li>
+            <li>Newsroom</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="Column">
+        <h4>Let Us Help You</h4>
+        <ul>
+          <li>Account Details</li>
+          <li>Order History</li>
+          <li>Help</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>Doing Business</h4>
+        <ul>
+          <li>Become a Dasher</li>
+          <li>DoorDash Merchant</li>
+          <li>Get Dashers for Deliveries</li>
+          <li>Get DooDash for Business
+        </ul>
+      </div>
+      <div class="column app-links">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store"
+          width="150">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play"
+          width="150">
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        <img src="img/logo.png" alt="Logo" height="20">
+        <span>Terms of Service</span><span>Privacy</span> <span> Delivery Locations</span> <span> Do Not Sell
+          or Share My Personal Information</span> <span>©
+          2025 DoorDash</span>
+      </p>
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-x-twitter"></i>
+        <i class="fab fa-instragram"></i>
+      </div>
+    </div>
+  </footer>
+</div>
 
 </html>
+frvbttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttbvn
+bvjnutyfutututututututututututututututututututututututututututututututututututututututututututututututututututututut
+bvnjutyfjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjutjut  fjt
+ytfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+tnytynnnnytfjytfytjvfnvgnhjnuhuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuubcccuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+jjjjjjjjjjjjjjjjjjjjjjtgfuuuuuuuuuuuttjgtnbggngnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+gtggftvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbm
+mmmmmmmmmmmmmufjgbvuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+kkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+
+kkkkkkkkkkkkkkkkkkkkkkkkkkkkkl
+
+
+
+
+
+
+frfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfr
+
+
+
+
+
+lllllllllllllllllllltfugbjvnuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuutuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+hvbytrbhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhccccccccccxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxcxcxxcxcxcxcxc
+frfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfr
+jnbuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+hybvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+ryffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffetttttttt
+fffffffffffffffffffffffffffffffffffffffffeddttttttttttttttttttttttttttttttttttttttttttttttttttttttfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfr
+yrrrrytbvhyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfr
+ggggggggbvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfr
+hvbytrbhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhccccccccccxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxcxcxxcxcxcxcxc
+
+frvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+frfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfr
+hhhhhhhhhhhhh
+frfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfrfr
