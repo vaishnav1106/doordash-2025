@@ -680,15 +680,6 @@ body {
   font-weight: 500;
   line-height: 180%;
 }
-.extra-cities{
-  display: none;
-  justify-content: left;
-  gap: 13%;
-  flex-wrap: wrap;
-  margin: 0% 15%;
-  font-size: 17px;
-  font-weight: 550px;
-}
 
 .lists ul {
  list-style: none;
@@ -704,9 +695,7 @@ body {
   font-size: 16px;
   color: #222;
 }
-.lists.hidden-city-row{
-  
-}
+
   
 /* See More */
 .see-more {
@@ -1255,11 +1244,10 @@ body {
   .dash-pass{
     margin-top: 10px;
   }
-  .door,
-  .dash-pass {
+  .door,.dash-pass {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     margin: 0 0 10px 0 !important;
     width: 100%;
     max-width: 850px;
@@ -1276,10 +1264,11 @@ body {
   }
   .door-section{
     width: 100%;
+    align-items: left;
     text-align: left;
-    margin:0 10px;
-    padding: 0 10px;
-    max-width:900px;
+    margin:0 5px;
+    padding: 0 5px;
+    max-width:1000px;
   }
   .door-section h2,
   .dash-pass h2 {
@@ -1288,11 +1277,6 @@ body {
     line-height: 1.3;
     max-width: 700px;
     width:60%;
-  }
-  .door-section h3 {
-    font-size: clamp(16px, 4vw, 20px);
-    margin-bottom: 6px;
-    margin-left: 0;
   }
   .door-section p,
   .dash-pass p {
@@ -1319,15 +1303,22 @@ body {
     top:-80% !important;
     padding: 50% 0;
   }
-  .bottom-section .door-section1{
+  .bottom-section ,.door-section1{
     width: 100%;
     text-align: left;
     margin:0 10px;
     padding: 0 10px;
     max-width:900px;
   }
+  .door-section1{
+     width: 100%;
+    text-align: left;
+    margin:0 10px;
+    padding: 0 10px;
+    max-width:900px;
+  }
  .door-section1 h2
-  /* ,.dash-pass h2  */{
+  {
     font-size: clamp(14px,20vw,24px);
     margin-bottom: 8px;
     line-height: 1.3;
@@ -1697,176 +1688,107 @@ body {
     margin-top: 10px;
   }
 }
-@media screen and (max-width: 990px) and (min-width: 770px) {
 
- .services {
+/* responsive Layout fro table */
+@media screen and (max-width:999px) and (min-width:771px){
+  .services {
   font-family: 'Roboto', Arial, sans-serif;
   padding: 60px 20px;
   text-align: center;
+  font-size: 14px !important;
+ }
+
+
+  .lists {
+     font-size: 14px !important;
+    justify-content: left;
+    gap: 29px;
+    margin:0 16%;
+    padding: 0;
+  }
+
+  .lists ul {
+    font-size: 14px;
+    width:102px;
+    min-width: unset;
+    margin:0;
+  }
+  .lists li{
+    width: 100%;
+  }
+
+  .extra-cities.active li{
+    justify-content: left;
+    width:140px;
+    
+  }
+
+  .lists.extra-cities.active ul{
+    font-size: 14px !important;
+    justify-content:left ;
+    min-width: unset;
+    margin:0;
+    width:75px;
+    gap:20px !important;
+  }
 }
 
-.services h2 {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
+@media screen and (max-width: 769px) and (min-width: 510px) {
+  .lists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0; /* optional: remove gap between columns */
+    margin-bottom: 0;
+  }
 
-.tabs {
-  display: flex;
-  margin: 0 16%;
-  justify-content: center;
-  border-bottom: 2px solid #eee;
-}
+  .lists ul {
+    width: 50%; /* fits 2 columns with slight margin */
+    margin: 0 0 0 0; /* spacing between rows */
+    padding: 0;
+  }
+  .lists li{
+    width:150px;
+  }
 
-.tab {
-  font-size: 16px;
-  font-weight: bold;
-  width:33.5%;
-  color: #555;
-  cursor: pointer;
-  padding: 8px 9px;
-  position: relative;
+  .lists ul:last-child {
+    margin-bottom: 0;
+  }
+   .extra-cities.active{
+    gap:0 !important;
+   }
+  .lists.extra-cities.active ul {
+    width: 50% !important;
+    margin: 0 0 0 0 !important;
+  }
 }
-.tabs :hover{
-  background-color:#55555525 ;
-}
+@media screen and (max-width:509px) {
+  .lists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0; /* optional: remove gap between columns */
+    margin-bottom: 0;
+  }
 
-.tab.active {
-  color: black;
-}
+  .lists ul {
+    width: 90%; 
+    margin: 0 0 0 0; /* spacing between rows */
+    padding: 0;
+  }
+  .lists li{
+    width:150px;
+  }
 
-.tab.active::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  width:100%;
-  background-color: black;
+  .lists ul:last-child {
+    margin-bottom: 0;
+  }
+   .extra-cities.active{
+    gap:0 !important;
+   }
+  .lists.extra-cities.active ul {
+    width: 90% !important;
+    margin: 0 0 0 0 !important;
+  }
+  
 }
-
-/* City Lists */
-.lists {
-  display: flex;
-  justify-content: flex-start;
-  gap: 60px;
-  flex-wrap: wrap;
-  margin: 1% 16%;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 150%;
-}
-.extra-cities{
-  display: none;
-  justify-content: left;
-  gap: 13%;
-  flex-wrap: wrap;
-  margin: 0% 15%;
-  font-size: 17px;
-  font-weight: 550px;
-}
-
-.lists ul {
- list-style: none;
-  padding: 0;
-  text-align: left;
-  width: 22%; /* Safe base for 4-column shrink */
-  min-width: 150px;
- 
-}
-
-.lists li {
-  margin: 5px 0;
-  font-size: 16px;
-  color: #222;
-}
-
-/* See More */
-.see-more {
-  font-family:"Roboto","Arial";
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: #111;
-  padding: 12px 20px;
-}
-/* Tab content visibility */
-.tab-content,
-#cuisines,
-#chains
-{
-  display: none;
-}
-
-.tab-content.active,
-.lists.cuisines.active,
-.lists.chains.active {
-  display: flex;
-  flex-wrap: wrap;
-}
-/* Show cities by default */
-.tab-content{
-  display: none;
-}
-.tab-content.active {
-  display: block;
-}
-
-.lists.extra-cities {
-    display: none;
-}
-
-.lists.extra-cities.active {
-  display: flex;
-  justify-content: flex-start;
-  gap: 180px;
-  flex-wrap: wrap;
-  margin: 0% 16%;
-  font-size: 17px;
-  font-weight: 600px;
-  line-height: 150%;
-}
-
-.cuisines.active,.chains.active{
-  display: flex;
-  justify-content: left;
-  gap: 170px;
-  flex-wrap: wrap;
-  margin: 1% 15%;
-  line-height: 180%;
-  font-size: 18px;
-  font-weight: 550px;
-}
-
-.lists.extra-cities {
-  display: none;
-  justify-content: left;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.lists.extra-cities.show {
-  display: flex;
-}
-.circle-btn{
-  width:45px;
-  height:45px;
-  border:none;
-  border-radius: 50%;
-  background-color:#f0f0f0;
-  font-size: 18px;
-  cursor: pointer;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
-}
-
-.see-more i {
-  font-size: 18px;
-  transition: transform 0.3s ease;
-} }
