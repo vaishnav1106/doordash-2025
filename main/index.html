@@ -73,6 +73,19 @@
     <button class="continue-btn">Continue in app</button>
   </div>
 
+  <!-- //////////////////////////// -->
+  <header class="scroll-header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="img/dash.png" alt="DoorDash Logo"><h2>DOORDASH</h2>
+      </div>
+      <div class="header-buttons">
+        <button class="btn-signin">Sign In</button>
+        <button class="btn-signup">Sign Up</button>
+      </div>
+    </div>
+  </header>
+
   <!--/////////////////////////  -->
   <section class="features">
     <div class="feature-box">
@@ -440,16 +453,22 @@
       });
     }
   });
-</script>
-
-  
+   window.addEventListener("scroll", function () {
+    const header = document.querySelector(".scroll-header");
+    if (window.scrollY > 150) {
+      header.style.transform = "translateY(0)";
+    } else {
+      header.style.transform = "translateY(-100%)";
+    }
+  });
+</script>  
 </body>
-<div class="footer-main-section">   
   <footer class="footer">
-    <div class="footer-top">
-      <div class="footer-section">
+    <div class="footer-section">
+      <!-- Top -->
+      <div class="footer-top-heading">
         <h4>Popular Categories</h4>
-        <div class="footer-links-grid">
+        <div class="footer-top">
           <ul>
             <li>Alcohol Australia</li>
             <li>Alcohol Delivery Australia</li>
@@ -481,9 +500,11 @@
             <li>Make It Date Night</li>
             <li>Medicine Delivery</li>
             <li>Mothers Day</li>
-            <li>Pet Store Near Me</li>
+            <li>Pepsi</li>
           </ul>
           <ul>
+            <li>Pet Store Near Me</li>
+            <li>Pickleball</li>
             <li>Play For An Ultra</li>
             <li>Procter Gamble</li>
             <li>Retail Stores Near Me</li>
@@ -495,63 +516,78 @@
         </div>
       </div>
 
-      <div class="footer-subsection">
-        <div class="column">
-          <h4>Get to Know Us</h4>
-          <ul>
-            <li>About Us</li>
-            <li>Careers</li>
-            <li>Investors</li>
-            <li>Company Blog</li>
-            <li>Engineering Blog</li>
-            <li>Merchant Blog</li>
-            <li>Gift Cards</li>
-            <li>Package Pickup</li>
-            <li>Promotions</li>
-            <li>Dasher Central</li>
-            <li>LinkedIn</li>
-            <li>Glassdoor</li>
-            <li>Accessibility</li>
-            <li>Newsroom</li>
-          </ul>
+      <!-- Middle -->
+      <div class="footer-middle">
+        <div class="footer-mid-list">
+          <div class="footer-column">
+            <h4>Get to Know Us</h4>
+            <ul>
+              <li>About Us</li>
+              <li>Careers</li>
+              <li>Investors</li>
+              <li>Company Blog</li>
+              <li>Engineering Blog</li>
+              <li>Merchant Blog</li>
+              <li>Gift Cards</li>
+              <li>Promotions</li>
+              <li>Dasher Central</li>
+              <li>LinkedIn</li>
+              <li>Glassdoor</li>
+              <li>Accessibility</li>
+              <li>Newsroom</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Let Us Help You</h4>
+            <ul>
+              <li>Account Details</li>
+              <li>Order History</li>
+              <li>Help</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Doing Business</h4>
+            <ul>
+              <li>Become a Dasher</li>
+              <li>DoorDash Merchant</li>
+              <li>Get Dashers for Deliveries</li>
+              <li>Get DoorDash for Business</li>
+            </ul>
+          </div>
         </div>
-        <div class="column">
-          <h4>Let Us Help You</h4>
-          <ul>
-            <li>Account Details</li>
-            <li>Order History</li>
-            <li>Help</li>
-          </ul>
-        </div>
-        <div class="column">
-          <h4>Doing Business</h4>
-          <ul>
-            <li>Become a Dasher</li>
-            <li>DoorDash Merchant</li>
-            <li>Get Dashers for Deliveries</li>
-            <li>Get DoorDash for Business</li>
-          </ul>
-        </div>
-        <div class="column app-links">
-          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" width="150">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" width="150">
+
+        <div class="app-links">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+            alt="Google Play" />
         </div>
       </div>
     </div>
 
-    <div class="footer-bottom">
-      <p>
-        <img src="img/logo.png" alt="Logo" height="20">
-        Terms of Service | Privacy | Delivery Locations | Do Not Sell or Share My Personal Information © 2025 DoorDash
-      </p>
-      <div class="footer-controls">
-        <select>
-          <option>English (US)</option>
-          <option>Chinese</option>
-          <option>Korean</option>
-          <option>Japanese</option>
-          <option>Thai</option>
-        </select>
+    <!-- Bottom -->
+    <div class="footer-section">
+      <div class="footer-bottom">
+        <div class="footer-left">
+          <img src="img/logo.png" alt="Logo" class="footer-logo" />
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy</a>
+          <a href="#">Delivery Locations</a>
+          <a href="#">Do Not Sell or Share My Personal Information</a>
+          <span>© 2025 DoorDash</span>
+        </div>
+
+        <div class="language-selector">
+          <i class="fas fa-globe"></i>
+          <select>
+            <option value="en" selected>English (US)</option>
+            <option value="ca">English (CA)</option>
+            <option value="es">Español</option>
+            <option value="nz">English (NZ)</option>
+            <option value="au">English (AU)</option>
+          </select>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+
         <div class="social-icons">
           <i class="fab fa-facebook-f"></i>
           <i class="fab fa-x-twitter"></i>
@@ -560,5 +596,4 @@
       </div>
     </div>
   </footer>
-</div>
 </html>
