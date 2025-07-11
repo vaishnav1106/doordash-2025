@@ -77,7 +77,8 @@
   <header class="scroll-header">
     <div class="header-container">
       <div class="logo">
-        <img src="img/dash.png" alt="DoorDash Logo"><h2>DOORDASH</h2>
+        <img src="img/dash.png" alt="DoorDash Logo">
+        <h2>DOORDASH</h2>
       </div>
       <div class="header-buttons">
         <button class="btn-signin">Sign In</button>
@@ -259,44 +260,36 @@
       <div class="tab active" data-tab="cities">Top Cities</div>
       <div class="tab" data-tab="cuisines">Top Cuisines</div>
       <div class="tab" data-tab="chains">Top Chains</div>
-
     </div>
+
     <div class="tab-content active" id="cities">
       <div class="lists">
-
         <ul>
           <li>New York</li>
           <li>Houston</li>
           <li>San Francisco</li>
           <li>Vancouver</li>
         </ul>
-
         <ul>
           <li>Los Angeles</li>
           <li>Brooklyn</li>
           <li>Seattle</li>
           <li>Miami</li>
         </ul>
-
         <ul>
           <li>Toronto</li>
           <li>San Diego</li>
           <li>Atlanta</li>
           <li>San Antonio</li>
         </ul>
-
         <ul>
           <li>Chicago</li>
           <li>Las Vegas</li>
           <li>Queens</li>
-          <ul class="lists hidden-city-row">
-            <li>Tallahassee</li>
-          </ul>
+          <li class="hidden-city-row">Tallahassee</li>
         </ul>
-
       </div>
       <div class="extra-cities lists" id="extra-cities">
-
         <ul>
           <li>Bend</li>
           <li>Kamloops</li>
@@ -329,14 +322,13 @@
           <li>Quebec</li>
           <li>All Cities</li>
         </ul>
-
       </div>
       <div class="see-more">
         <strong>See more</strong>
-        <span><button class="circle-btn"><i class="fa-solid fa-angle-down"></i></button></span> <!-- Down arrow -->
+        <span><button class="circle-btn"><i class="fa-solid fa-angle-down"></i></button></span>
       </div>
     </div>
-    <!-- For Cuisines -->
+
     <div class="tab-content" id="cuisines">
       <div class="lists">
         <ul>
@@ -366,7 +358,6 @@
       </div>
     </div>
 
-    <!-- For Chains -->
     <div class="tab-content" id="chains">
       <div class="lists">
         <ul>
@@ -377,7 +368,7 @@
         </ul>
         <ul>
           <li>Wingstop</li>
-          <li>Popeyes </li>
+          <li>Popeyes</li>
           <li>McDonald's</li>
           <li>7-Eleven</li>
         </ul>
@@ -390,210 +381,212 @@
         <ul>
           <li>Subway</li>
           <li>Walgreens</li>
-          <li>Chipotle Mexican Grill</li>
+          <li>Chipotle</li>
         </ul>
       </div>
     </div>
   </div>
+  </div>
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const tabs = document.querySelectorAll(".tab");
-    const tabContents = document.querySelectorAll(".tab-content");
-    const seeMoreButton = document.querySelector(".see-more .circle-btn");
-    const seeMoreWrapper = document.querySelector(".see-more");
-    const extraCities = document.getElementById("extra-cities");
-    const hiddenCityRow = document.querySelector(".hidden-city-row");
-    const seeMoreText = document.querySelector(".see-more strong");
-    let expanded = false;
+    document.addEventListener("DOMContentLoaded", function () {
+      const tabs = document.querySelectorAll(".tab");
+      const tabContents = document.querySelectorAll(".tab-content");
+      const seeMoreButton = document.querySelector(".see-more .circle-btn");
+      const seeMoreWrapper = document.querySelector(".see-more");
+      const extraCities = document.getElementById("extra-cities");
+      const hiddenCityRow = document.querySelector(".hidden-city-row");
+      const seeMoreText = document.querySelector(".see-more strong");
+      let expanded = false;
 
-    tabs.forEach(tab => {
-      tab.addEventListener("click", function () {
-        const selectedTab = this.getAttribute("data-tab");
+      tabs.forEach(tab => {
+        tab.addEventListener("click", function () {
+          const selectedTab = this.getAttribute("data-tab");
 
-        // Switch active tab
-        tabs.forEach(t => t.classList.remove("active"));
-        this.classList.add("active");
+          // Switch active tab
+          tabs.forEach(t => t.classList.remove("active"));
+          this.classList.add("active");
 
-        // Hide all tab contents
-        tabContents.forEach(content => content.style.display = "none");
+          // Hide all tab contents
+          tabContents.forEach(content => content.style.display = "none");
 
-        // Show selected tab content
-        const selectedContent = document.getElementById(selectedTab);
-        if (selectedContent) {
-          selectedContent.style.display = "block";
-        }
+          // Show selected tab content
+          const selectedContent = document.getElementById(selectedTab);
+          if (selectedContent) {
+            selectedContent.style.display = "block";
+          }
 
-        // Only show "See More" for Cities tab
-        if (selectedTab === "cities") {
-          seeMoreWrapper.style.display = "inline-flex";
-        } else {
-          seeMoreWrapper.style.display = "none";
-        }
+          // Only show "See More" for Cities tab
+          if (selectedTab === "cities") {
+            seeMoreWrapper.style.display = "inline-flex";
+          } else {
+            seeMoreWrapper.style.display = "none";
+          }
 
-        // Reset extra cities and hidden city when switching tabs
-        expanded = false;
-        if (extraCities) extraCities.classList.remove("active");
-        if (hiddenCityRow) hiddenCityRow.style.display = "none";
-        if (seeMoreText) seeMoreText.textContent = "See more";
-        if (seeMoreButton) seeMoreButton.innerHTML = '<i class="fa-solid fa-angle-down"></i>';
+          // Reset extra cities and hidden city when switching tabs
+          expanded = false;
+          if (extraCities) extraCities.classList.remove("active");
+          if (hiddenCityRow) hiddenCityRow.style.display = "none";
+          if (seeMoreText) seeMoreText.textContent = "See more";
+          if (seeMoreButton) seeMoreButton.innerHTML = '<i class="fa-solid fa-angle-down"></i>';
+        });
       });
+
+      // Toggle extra cities and Tallahassee row
+      if (seeMoreButton) {
+        seeMoreButton.addEventListener("click", function () {
+          expanded = !expanded;
+
+          if (extraCities) extraCities.classList.toggle("active");
+          if (hiddenCityRow) hiddenCityRow.style.display = expanded ? "list-item" : "none";
+          if (seeMoreText) seeMoreText.textContent = expanded ? "See less" : "See more";
+          seeMoreButton.innerHTML = expanded
+            ? '<i class="fa-solid fa-angle-up"></i>'
+            : '<i class="fa-solid fa-angle-down"></i>';
+        });
+      }
     });
-
-    // Toggle extra cities and Tallahassee row
-    if (seeMoreButton) {
-      seeMoreButton.addEventListener("click", function () {
-        expanded = !expanded;
-
-        if (extraCities) extraCities.classList.toggle("active");
-        if (hiddenCityRow) hiddenCityRow.style.display = expanded ? "list-item" : "none";
-        if (seeMoreText) seeMoreText.textContent = expanded ? "See less" : "See more";
-        seeMoreButton.innerHTML = expanded
-          ? '<i class="fa-solid fa-angle-up"></i>'
-          : '<i class="fa-solid fa-angle-down"></i>';
-      });
-    }
-  });
-   window.addEventListener("scroll", function () {
-    const header = document.querySelector(".scroll-header");
-    if (window.scrollY > 150) {
-      header.style.transform = "translateY(0)";
-    } else {
-      header.style.transform = "translateY(-100%)";
-    }
-  });
-</script>  
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector(".scroll-header");
+      if (window.scrollY > 150) {
+        header.style.transform = "translateY(0)";
+      } else {
+        header.style.transform = "translateY(-100%)";
+      }
+    });
+  </script>
 </body>
-  <footer class="footer">
-    <div class="footer-section">
-      <!-- Top -->
-      <div class="footer-top-heading">
-        <h4>Popular Categories</h4>
-        <div class="footer-top">
-          <ul>
-            <li>Alcohol Australia</li>
-            <li>Alcohol Delivery Australia</li>
-            <li>Back To School Delivery</li>
-            <li>Battle Of The Brands</li>
-            <li>Beauty Stores</li>
-            <li>Beauty Supply</li>
-            <li>Catering Near Me</li>
-            <li>Chips Ahoy Big Cookie</li>
-            <li>Convenience Stores Canada</li>
-          </ul>
-          <ul>
-            <li>Dashmart Near Me</li>
-            <li>Deck The Doorstep</li>
-            <li>Diageo Holiday</li>
-            <li>Drugstores Canada</li>
-            <li>Flower Delivery</li>
-            <li>Grocery Delivery Canada</li>
-            <li>Grocery Retail Convenience</li>
-            <li>Haleon Well Within Reach</li>
-            <li>Halloween</li>
-          </ul>
-          <ul>
-            <li>Holiday Hosting</li>
-            <li>Hsa Bank</li>
-            <li>Hsa Fsa Store</li>
-            <li>Large Group Orders</li>
-            <li>Local Eats Deserve Pepsi</li>
-            <li>Make It Date Night</li>
-            <li>Medicine Delivery</li>
-            <li>Mothers Day</li>
-            <li>Pepsi</li>
-          </ul>
-          <ul>
-            <li>Pet Store Near Me</li>
-            <li>Pickleball</li>
-            <li>Play For An Ultra</li>
-            <li>Procter Gamble</li>
-            <li>Retail Stores Near Me</li>
-            <li>Seasonal Holidays</li>
-            <li>Snap Ebt</li>
-            <li>Valentines Day</li>
-            <li>Winter Holidays</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Middle -->
-      <div class="footer-middle">
-        <div class="footer-mid-list">
-          <div class="footer-column">
-            <h4>Get to Know Us</h4>
-            <ul>
-              <li>About Us</li>
-              <li>Careers</li>
-              <li>Investors</li>
-              <li>Company Blog</li>
-              <li>Engineering Blog</li>
-              <li>Merchant Blog</li>
-              <li>Gift Cards</li>
-              <li>Promotions</li>
-              <li>Dasher Central</li>
-              <li>LinkedIn</li>
-              <li>Glassdoor</li>
-              <li>Accessibility</li>
-              <li>Newsroom</li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>Let Us Help You</h4>
-            <ul>
-              <li>Account Details</li>
-              <li>Order History</li>
-              <li>Help</li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>Doing Business</h4>
-            <ul>
-              <li>Become a Dasher</li>
-              <li>DoorDash Merchant</li>
-              <li>Get Dashers for Deliveries</li>
-              <li>Get DoorDash for Business</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="app-links">
-          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-            alt="Google Play" />
-        </div>
+<footer class="footer">
+  <div class="footer-section">
+    <!-- Top -->
+    <div class="footer-top-heading">
+      <h4>Popular Categories</h4>
+      <div class="footer-top">
+        <ul>
+          <li>Alcohol Australia</li>
+          <li>Alcohol Delivery Australia</li>
+          <li>Back To School Delivery</li>
+          <li>Battle Of The Brands</li>
+          <li>Beauty Stores</li>
+          <li>Beauty Supply</li>
+          <li>Catering Near Me</li>
+          <li>Chips Ahoy Big Cookie</li>
+          <li>Convenience Stores Canada</li>
+        </ul>
+        <ul>
+          <li>Dashmart Near Me</li>
+          <li>Deck The Doorstep</li>
+          <li>Diageo Holiday</li>
+          <li>Drugstores Canada</li>
+          <li>Flower Delivery</li>
+          <li>Grocery Delivery Canada</li>
+          <li>Grocery Retail Convenience</li>
+          <li>Haleon Well Within Reach</li>
+          <li>Halloween</li>
+        </ul>
+        <ul>
+          <li>Holiday Hosting</li>
+          <li>Hsa Bank</li>
+          <li>Hsa Fsa Store</li>
+          <li>Large Group Orders</li>
+          <li>Local Eats Deserve Pepsi</li>
+          <li>Make It Date Night</li>
+          <li>Medicine Delivery</li>
+          <li>Mothers Day</li>
+          <li>Pepsi</li>
+        </ul>
+        <ul>
+          <li>Pet Store Near Me</li>
+          <li>Pickleball</li>
+          <li>Play For An Ultra</li>
+          <li>Procter Gamble</li>
+          <li>Retail Stores Near Me</li>
+          <li>Seasonal Holidays</li>
+          <li>Snap Ebt</li>
+          <li>Valentines Day</li>
+          <li>Winter Holidays</li>
+        </ul>
       </div>
     </div>
 
-    <!-- Bottom -->
-    <div class="footer-section">
-      <div class="footer-bottom">
-        <div class="footer-left">
-          <img src="img/logo.png" alt="Logo" class="footer-logo" />
-          <a href="#">Terms of Service</a>
-          <a href="#">Privacy</a>
-          <a href="#">Delivery Locations</a>
-          <a href="#">Do Not Sell or Share My Personal Information</a>
-          <span>© 2025 DoorDash</span>
+    <!-- Middle -->
+    <div class="footer-middle">
+      <div class="footer-mid-list">
+        <div class="footer-column">
+          <h4>Get to Know Us</h4>
+          <ul>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Investors</li>
+            <li>Company Blog</li>
+            <li>Engineering Blog</li>
+            <li>Merchant Blog</li>
+            <li>Gift Cards</li>
+            <li>Promotions</li>
+            <li>Dasher Central</li>
+            <li>LinkedIn</li>
+            <li>Glassdoor</li>
+            <li>Accessibility</li>
+            <li>Newsroom</li>
+          </ul>
         </div>
-
-        <div class="language-selector">
-          <i class="fas fa-globe"></i>
-          <select>
-            <option value="en" selected>English (US)</option>
-            <option value="ca">English (CA)</option>
-            <option value="es">Español</option>
-            <option value="nz">English (NZ)</option>
-            <option value="au">English (AU)</option>
-          </select>
-          <i class="fas fa-chevron-down"></i>
+        <div class="footer-column">
+          <h4>Let Us Help You</h4>
+          <ul>
+            <li>Account Details</li>
+            <li>Order History</li>
+            <li>Help</li>
+          </ul>
         </div>
-
-        <div class="social-icons">
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-x-twitter"></i>
-          <i class="fab fa-instagram"></i>
+        <div class="footer-column">
+          <h4>Doing Business</h4>
+          <ul>
+            <li>Become a Dasher</li>
+            <li>DoorDash Merchant</li>
+            <li>Get Dashers for Deliveries</li>
+            <li>Get DoorDash for Business</li>
+          </ul>
         </div>
       </div>
+
+      <div class="app-links">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+          alt="Google Play" />
+      </div>
     </div>
-  </footer>
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-section">
+    <div class="footer-bottom">
+      <div class="footer-left">
+        <img src="img/logo.png" alt="Logo" class="footer-logo" />
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy</a>
+        <a href="#">Delivery Locations</a>
+        <a href="#">Do Not Sell or Share My Personal Information</a>
+        <span>© 2025 DoorDash</span>
+      </div>
+
+      <div class="language-selector">
+        <i class="fas fa-globe"></i>
+        <select>
+          <option value="en" selected>English (US)</option>
+          <option value="ca">English (CA)</option>
+          <option value="es">Español</option>
+          <option value="nz">English (NZ)</option>
+          <option value="au">English (AU)</option>
+        </select>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-x-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </html>

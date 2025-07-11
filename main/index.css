@@ -777,6 +777,8 @@ body {
 /* /////////////////tabbed///////////////////////*/
 /* today june11 */
 /* Base styles */
+
+
 .services {
   font-family: 'Roboto', Arial, sans-serif;
   padding: 60px 20px;
@@ -791,7 +793,8 @@ body {
 
 .tabs {
   display: flex;
-  margin: 0 16%;
+  margin: 0 auto;
+  max-width: 1140px;
   justify-content: center;
   border-bottom: 2px solid #eee;
 }
@@ -799,19 +802,23 @@ body {
 .tab {
   font-size: 16px;
   font-weight: bold;
-  width: 33.5%;
+  width: 100%;
+  max-width: 380px;
   color: #555;
   cursor: pointer;
-  padding: 8px 9px;
+  padding: 10px 15px;
   position: relative;
+  text-align: center;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
 }
 
-.tabs :hover {
-  background-color: #55555525;
+.tab:hover {
+  background-color: #f0f0f0;
 }
 
 .tab.active {
-  color: black;
+  color: #000;
 }
 
 .tab.active::after {
@@ -821,17 +828,16 @@ body {
   left: 0;
   right: 0;
   height: 2px;
-  width: 100%;
   background-color: black;
 }
 
-/* City Lists */
+/* Lists Layout */
 .lists {
   display: flex;
-  justify-content: flex-start;
-  gap: 60px;
+  justify-content: left;
+  gap: 70px;
   flex-wrap: wrap;
-  margin: 0% 16%;
+  margin: 1% 15% 0 15%;
   font-size: 18px;
   font-weight: 500;
   line-height: 180%;
@@ -842,21 +848,18 @@ body {
   padding: 0;
   text-align: left;
   width: 18%;
-  /* Safe base for 4-column shrink */
   min-width: 110px;
-
 }
 
 .lists li {
-  margin: 0px 0;
+  font-weight: bold;
   font-size: 16px;
   color: #222;
+  margin: 6px 0;
 }
 
-
-/* See More */
+/* See More Section */
 .see-more {
-  font-family: "Roboto", "Arial";
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
@@ -864,70 +867,10 @@ body {
   align-items: center;
   gap: 8px;
   color: #111;
-  padding: 12px 20px;
+  margin-top: 25px;
 }
 
-/* Tab content visibility */
-.tab-content,
-#cuisines,
-#chains {
-  display: none;
-}
-
-.tab-content.active,
-.lists.cuisines.active,
-.lists.chains.active {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* Show cities by default */
-.tab-content {
-  display: none;
-}
-
-.tab-content.active {
-  display: block;
-}
-
-.lists.extra-cities .hidden-city-row {
-  display: none;
-}
-
-.lists.extra-cities.active {
-  display: flex;
-  justify-content: flex-start;
-  gap: 60px;
-  flex-wrap: wrap;
-  margin: 0% 16%;
-  font-size: 17px;
-  font-weight: 600px;
-  line-height: 180%;
-}
-
-.cuisines.active,
-.chains.active {
-  display: flex;
-  justify-content: left;
-  gap: 170px;
-  flex-wrap: wrap;
-  margin: 1% 15%;
-  line-height: 180%;
-  font-size: 18px;
-  font-weight: 550px;
-}
-
-.lists.extra-cities {
-  display: none;
-  justify-content: left;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.lists.extra-cities.show {
-  display: flex;
-}
-
+/* Button Style */
 .circle-btn {
   width: 45px;
   height: 45px;
@@ -947,28 +890,40 @@ body {
   transition: transform 0.3s ease;
 }
 
-*/ .see-more i {
-  transform: rotate(180deg);
+/* Tab Content */
+.tab-content {
+  display: none;
 }
 
+.tab-content.active {
+  display: block;
+}
+
+/* Extra Cities Section */
+.lists.extra-cities {
+  display: none;
+  margin-top: 0;
+}
+
+.lists.extra-cities.active {
+  display: flex;
+  justify-content: flex-start;
+  gap: 70px;
+  flex-wrap: wrap;
+  margin: 0% 15%;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 180%;
+}
+
+/* Hidden City Row (Tallahassee) */
 .hidden-city-row {
   display: none;
-  padding-left: 0;
-  margin-left: 0;
 }
 
-.lists.hidden-city-row.show {
-  display: block;
-  justify-content: left;
-  font-size: 10px;
+.hidden-city-row.show {
+  display: list-item;
 }
-
-.hidden-city-row li {
-  margin: 0 0;
-  font-size: 16px;
-  color: #222;
-}
-
 /* /////////////////////////////////////////////// */
 /* footer */
 .footer {
@@ -1072,7 +1027,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:20px;
+  padding: 20px;
   color: #fff;
   font-size: 10px;
   flex-wrap: wrap;

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top Cities</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+
+    .services {
+      padding: 60px 25px;
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .tabs {
+      display: flex;
+      margin: 0 245px;
+      width: 100%;
+      max-width: 1140px;
+      justify-content: center;
+      border-bottom: 2px solid #eee;
+    }
+
+    .tab {
+      font-size: 16px;
+      font-weight: bold;
+      width: 100%;
+      max-width: 380px;
+      color: #555;
+      cursor: pointer;
+      padding: 8px 9px;
+      position: relative;
+    }
+
+    .tabs :hover {
+      background-color: #55555525;
+    }
+
+    .tab.active {
+      color: black;
+    }
+
+    .tab.active::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: black;
+    }
+
+    .lists {
+      display: flex;
+      justify-content: flex-start;
+      gap: 70px;
+      flex-wrap: wrap;
+      margin: 1% 15% 0 15%;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 180%;
+    }
+
+    .lists ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      width: 18%;
+      min-width: 110px;
+    }
+
+    .lists li {
+      font-weight: bold;
+      font-size: 16px;
+      color: #222;
+    }
+
+    .see-more {
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #111;
+      margin-top: 25px;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .lists.extra-cities {
+      display: none;
+    }
+
+    .lists.extra-cities.active {
+      display: flex;
+      justify-content: flex-start;
+      gap: 70px;
+      flex-wrap: wrap;
+      margin: 0% 15%;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 180%;
+    }
+
+    .circle-btn {
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      background-color: #f0f0f0;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .see-more i {
+      font-size: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    .hidden-city-row {
+      display: none;
+    }
+
+    .hidden-city-row.show {
+      display: list-item;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="services">
+    <h2>Get more from your neighborhood</h2>
+    <div class="tabs">
+      <div class="tab active" data-tab="cities">Top Cities</div>
+      <div class="tab" data-tab="cuisines">Top Cuisines</div>
+      <div class="tab" data-tab="chains">Top Chains</div>
+    </div>
+
+    <div class="tab-content active" id="cities">
+      <div class="lists">
+        <ul>
+          <li>New York</li><li>Houston</li><li>San Francisco</li><li>Vancouver</li>
+        </ul>
+        <ul>
+          <li>Los Angeles</li><li>Brooklyn</li><li>Seattle</li><li>Miami</li>
+        </ul>
+        <ul>
+          <li>Toronto</li><li>San Diego</li><li>Atlanta</li><li>San Antonio</li>
+        </ul>
+        <ul>
+          <li>Chicago</li><li>Las Vegas</li><li>Queens</li><li class="hidden-city-row">Tallahassee</li>
+        </ul>
+      </div>
+      <div class="extra-cities lists" id="extra-cities">
+        <ul><li>Bend</li><li>Kamloops</li><li>Tulsa</li><li>Austin</li><li>Salt Lake City</li><li>Jacksonville</li></ul>
+        <ul><li>Colorado Spring</li><li>Wilmington</li><li>Birmingham</li><li>New Orleans</li><li>Lexington</li><li>Orlando</li></ul>
+        <ul><li>Victoria</li><li>Columbia</li><li>Scottsdale</li><li>Augusta</li><li>Christchurch</li><li>Milwaukee</li></ul>
+        <ul><li>Pittsburgh</li><li>Ft.Worth</li><li>Huntsville</li><li>Des Moines</li><li>Quebec</li><li>All Cities</li></ul>
+      </div>
+      <div class="see-more">
+        <strong>See more</strong>
+        <span><button class="circle-btn"><i class="fa-solid fa-angle-down"></i></button></span>
+      </div>
+    </div>
+
+    <div class="tab-content" id="cuisines">
+      <div class="lists">
+        <ul><li>Pizza</li><li>Thai Food</li><li>Dessert</li><li>Vegan Food</li></ul>
+        <ul><li>Chinese Food</li><li>Lunch</li><li>Burger</li><li>Sandwiches</li></ul>
+        <ul><li>Sushi</li><li>Seafood</li><li>Asian Food</li><li>Restaurants</li></ul>
+        <ul><li>Cafe</li><li>Indian Food</li><li>Italian Food</li><li>Mediterranean</li></ul>
+      </div>
+    </div>
+
+    <div class="tab-content" id="chains">
+      <div class="lists">
+        <ul><li>Dunkin'</li><li>Burger King</li><li>Taco Bell</li><li>Starbucks</li></ul>
+        <ul><li>Wingstop</li><li>Popeyes</li><li>McDonald's</li><li>7-Eleven</li></ul>
+        <ul><li>Wendy's</li><li>Chick-fil-A</li><li>Dollar General</li><li>Panda Express</li></ul>
+        <ul><li>Subway</li><li>Walgreens</li><li>Chipotle</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const tabs = document.querySelectorAll(".tab");
+      const tabContents = document.querySelectorAll(".tab-content");
+      const seeMoreButton = document.querySelector(".see-more .circle-btn");
+      const seeMoreWrapper = document.querySelector(".see-more");
+      const extraCities = document.getElementById("extra-cities");
+      const hiddenCityRow = document.querySelector(".hidden-city-row");
+      const seeMoreText = document.querySelector(".see-more strong");
+      let expanded = false;
+
+      tabs.forEach(tab => {
+        tab.addEventListener("click", function () {
+          const selectedTab = this.getAttribute("data-tab");
+
+          // Switch active tab
+          tabs.forEach(t => t.classList.remove("active"));
+          this.classList.add("active");
+
+          // Hide all tab contents
+          tabContents.forEach(content => content.style.display = "none");
+
+          // Show selected tab content
+          const selectedContent = document.getElementById(selectedTab);
+          if (selectedContent) {
+            selectedContent.style.display = "block";
+          }
+
+          // Only show "See More" for Cities tab
+          if (selectedTab === "cities") {
+            seeMoreWrapper.style.display = "inline-flex";
+          } else {
+            seeMoreWrapper.style.display = "none";
+          }
+
+          // Reset extra cities and hidden city when switching tabs
+          expanded = false;
+          if (extraCities) extraCities.classList.remove("active");
+          if (hiddenCityRow) hiddenCityRow.style.display = "none";
+          if (seeMoreText) seeMoreText.textContent = "See more";
+          if (seeMoreButton) seeMoreButton.innerHTML = '<i class="fa-solid fa-angle-down"></i>';
+        });
+      });
+
+      // Toggle extra cities and Tallahassee row
+      if (seeMoreButton) {
+        seeMoreButton.addEventListener("click", function () {
+          expanded = !expanded;
+
+          if (extraCities) extraCities.classList.toggle("active");
+          if (hiddenCityRow) hiddenCityRow.style.display = expanded ? "list-item" : "none";
+          if (seeMoreText) seeMoreText.textContent = expanded ? "See less" : "See more";
+          seeMoreButton.innerHTML = expanded
+            ? '<i class="fa-solid fa-angle-up"></i>'
+            : '<i class="fa-solid fa-angle-down"></i>';
+        });
+      }
+    });
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector(".scroll-header");
+      if (window.scrollY > 150) {
+        header.style.transform = "translateY(0)";
+      } else {
+        header.style.transform = "translateY(-100%)";
+      }
+    });
+  </script>
+</body>
+</html>
