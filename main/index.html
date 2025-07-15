@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="index.css" />
 </head>
 
@@ -74,8 +75,8 @@
   </div>
 
   <!-- //////////////////////////// -->
-  <header class="scroll-header">
-    <div class="header-container">
+  <header class="scroll-header ">
+    <div class="header-container  ">
       <div class="logo">
         <img src="img/dash.png" alt="DoorDash Logo">
         <h2>DOORDASH</h2>
@@ -83,6 +84,23 @@
       <div class="header-buttons">
         <button class="btn-signin">Sign In</button>
         <button class="btn-signup">Sign Up</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE HEADER (770px and below) -->
+  <header class=" mobile-header">
+    <div class="header-container">
+      <div class="header-search">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Enter delivery address" />
+        <button class="search-arrow">
+          <i class="fa fa-arrow-right"></i>
+        </button>
+      </div>
+      <div class="header-buttons-mobile">
+        <button class="btn-login">Login</button>
+        <button class="btn-openapp">Open App</button>
       </div>
     </div>
   </header>
@@ -282,7 +300,7 @@
           <li>Atlanta</li>
           <li>San Antonio</li>
         </ul>
-        <ul>
+        <ul id="merge-column">
           <li>Chicago</li>
           <li>Las Vegas</li>
           <li>Queens</li>
@@ -314,7 +332,7 @@
           <li>Christchurch</li>
           <li>Milwaukee</li>
         </ul>
-        <ul>
+        <ul id="merge-extra-column">
           <li>Pittsburgh</li>
           <li>Ft.Worth</li>
           <li>Huntsville</li>
@@ -349,7 +367,7 @@
           <li>Asian Food</li>
           <li>Restaurants</li>
         </ul>
-        <ul>
+        <ul id="merge-column">
           <li>Cafe</li>
           <li>Indian Food</li>
           <li>Italian Food</li>
@@ -378,7 +396,7 @@
           <li>Dollar General</li>
           <li>Panda Express</li>
         </ul>
-        <ul>
+        <ul id="merge-column">
           <li>Subway</li>
           <li>Walgreens</li>
           <li>Chipotle</li>
